@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  width: 1920px;
+  height: 826px;
+  background-color: #f9f5f3;
+  box-sizing: border-box;
+}
+
+[type="checkbox"] {
+  opacity: 0;
+}
+
+[type="checkbox"] + label {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+[type="checkbox"] + label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -20px;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #ff7f5c;
+  border-radius: 5px;
+  background-color: white;
+}
+
+[type="checkbox"]:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -20px;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #ff7f5c;
+  border-radius: 5px;
+  background-color: #ff7f5c;
+}
+
+/* ul,
+li {
+  list-style-type: none;
+}
+
+.checkbox-pop {
+  display: none;
+}
+.checkbox-pop + label span {
+  display: inline-block;
+  width: 25px;
+  height: 19px;
+  margin: 0 5px -4px 0;
+  /*layout relationship between check and label*/
+/* }
+.checkbox-pop + label span:before,
+.checkbox-pop + label span:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 1rem;
+  height: 1rem;
+  background: transparent;
+  border: 2px solid #ff4040;
+}
+.checkbox-pop + label span:after {
+  z-index: 0;
+  border: none;
+}
+
+.checkbox-pop:checked + label span:before {
+  animation: pop 0.3s ease;
+  z-index: 100;
+  background: #ff4040;
+} */
